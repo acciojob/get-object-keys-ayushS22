@@ -1,13 +1,16 @@
-//your JS code here. If required.
-// Create student object
-const student = {
-  name: "John"
+// Create object with function inside it
+const myObj = {
+  getKeys: function(obj) {
+    return Object.keys(obj);
+  }
 };
 
-// Function to get all keys
-function getKeys(obj) {
-  return Object.keys(obj);
-}
+// Example usage
+const student = {
+  name: "John",
+  age: 20,
+  city: "Delhi"
+};
 
-// Example test
-console.log(getKeys(student)); // ["name"]
+console.log(myObj.getKeys(student)); 
+// ["name", "age", "city"]
